@@ -358,6 +358,7 @@ class _MyMapState extends State<MyMap> {
       final infoWindowl1 = gg.InfoWindow(
           gg.InfoWindowOptions()..content = "38 Rue d'Enghien 75010 Paris");
       markerl1.onClick.listen((event) => infoWindowl1.open(map, markerl1));
+
       final markerl2 = gg.Marker(gg.MarkerOptions()
         ..position = gg.LatLng(48.881060, 2.292580)
         ..map = map
@@ -365,6 +366,14 @@ class _MyMapState extends State<MyMap> {
       final infoWindowl2 = gg.InfoWindow(
           gg.InfoWindowOptions()..content = "22 rue Torricelli 75017 paris");
       markerl2.onClick.listen((event) => infoWindowl2.open(map, markerl2));
+
+      final markerl3 = gg.Marker(gg.MarkerOptions()
+        ..position = gg.LatLng(48.821407, 2.285492)
+        ..map = map
+        ..icon = "assets/assets/black.png");
+      final infoWindowl3 = gg.InfoWindow(gg.InfoWindowOptions()
+        ..content = "6 rue de la république 92170 Vanves");
+      markerl3.onClick.listen((event) => infoWindowl3.open(map, markerl3));
 
       for (var i = 0; i < widget.validIndexes.length; i++) {
         int index = widget.validIndexes[i];
@@ -391,7 +400,8 @@ class _MyMapState extends State<MyMap> {
 List getMarkerDataPerIndex(livraisons) {
   String laverie1 = "38 Rue d'Enghien 75010 Paris";
   String laverie2 = "22 Rue Torricelli 75017 paris";
-  List<String> laveries = [laverie1, laverie2];
+  String laverie3 = "6 rue de la république 92170 Vanves";
+  List<String> laveries = [laverie1, laverie2, laverie3];
 
   Map<int, dynamic> colorPerIndex = {};
   Map<int, dynamic> latPerIndex = {};
