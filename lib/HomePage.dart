@@ -360,7 +360,7 @@ class _MyMapState extends State<MyMap> {
       markerl1.onClick.listen((event) => infoWindowl1.open(map, markerl1));
 
       final markerl2 = gg.Marker(gg.MarkerOptions()
-        ..position = gg.LatLng(48.881060, 2.292580)
+        ..position = gg.LatLng(48.8810714, 2.292586)
         ..map = map
         ..icon = "assets/assets/black.png");
       final infoWindowl2 = gg.InfoWindow(
@@ -374,6 +374,22 @@ class _MyMapState extends State<MyMap> {
       final infoWindowl3 = gg.InfoWindow(gg.InfoWindowOptions()
         ..content = "6 rue de la république 92170 Vanves");
       markerl3.onClick.listen((event) => infoWindowl3.open(map, markerl3));
+
+      final markerl4 = gg.Marker(gg.MarkerOptions()
+        ..position = gg.LatLng(48.8832253, 2.3680335)
+        ..map = map
+        ..icon = "assets/assets/black.png");
+      final infoWindowl4 = gg.InfoWindow(gg.InfoWindowOptions()
+        ..content = "268 Rue du Faubourg Saint-Martin 75010 Paris");
+      markerl4.onClick.listen((event) => infoWindowl4.open(map, markerl4));
+
+      final markerl5 = gg.Marker(gg.MarkerOptions()
+        ..position = gg.LatLng(48.84707820000001, 2.3774969)
+        ..map = map
+        ..icon = "assets/assets/black.png");
+      final infoWindowl5 = gg.InfoWindow(gg.InfoWindowOptions()
+        ..content = "24 Rue Hector Malot 75012 Paris");
+      markerl5.onClick.listen((event) => infoWindowl5.open(map, markerl5));
 
       for (var i = 0; i < widget.validIndexes.length; i++) {
         int index = widget.validIndexes[i];
@@ -401,7 +417,9 @@ List getMarkerDataPerIndex(livraisons) {
   String laverie1 = "38 Rue d'Enghien 75010 Paris";
   String laverie2 = "22 Rue Torricelli 75017 paris";
   String laverie3 = "6 rue de la république 92170 Vanves";
-  List<String> laveries = [laverie1, laverie2, laverie3];
+  String laverie4 = "268 Rue du Faubourg Saint-Martin 75010 Paris";
+  String laverie5 = "24 Rue Hector Malot 75012 Paris";
+  List<String> laveries = [laverie1, laverie2, laverie3, laverie4, laverie5];
 
   Map<int, dynamic> colorPerIndex = {};
   Map<int, dynamic> latPerIndex = {};
