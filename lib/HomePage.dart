@@ -391,6 +391,14 @@ class _MyMapState extends State<MyMap> {
         ..content = "24 Rue Hector Malot 75012 Paris");
       markerl5.onClick.listen((event) => infoWindowl5.open(map, markerl5));
 
+      final markerl6 = gg.Marker(gg.MarkerOptions()
+        ..position = gg.LatLng(48.8714763, 2.3517117)
+        ..map = map
+        ..icon = "assets/assets/black.png");
+      final infoWindowl6 = gg.InfoWindow(gg.InfoWindowOptions()
+        ..content = "16 rue de l'échiquier 75010 PARIS");
+      markerl6.onClick.listen((event) => infoWindowl6.open(map, markerl6));
+
       for (var i = 0; i < widget.validIndexes.length; i++) {
         int index = widget.validIndexes[i];
         final latLong =
@@ -419,7 +427,8 @@ List getMarkerDataPerIndex(livraisons) {
   String laverie3 = "6 rue de la république 92170 Vanves";
   String laverie4 = "268 Rue du Faubourg Saint-Martin 75010 Paris";
   String laverie5 = "24 Rue Hector Malot 75012 Paris";
-  List<String> laveries = [laverie1, laverie2, laverie3, laverie4, laverie5];
+  String laverie6 = "16 rue de l'échiquier 75010 PARIS";
+  List<String> laveries = [laverie1, laverie2, laverie3, laverie4, laverie5, laverie6];
 
   Map<int, dynamic> colorPerIndex = {};
   Map<int, dynamic> latPerIndex = {};
